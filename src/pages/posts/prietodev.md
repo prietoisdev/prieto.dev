@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/BlogLayout.astro
+layout: ../../layouts/BlogLayout.astro
 title: Proyecto Prieto Dev
 desc: Un proyecto único e impotente sobre mucho.
 datte: 2024/12/09
