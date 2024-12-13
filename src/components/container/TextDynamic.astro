@@ -1,0 +1,42 @@
+---
+import TextDyn from "../dynamic/TextDyn";
+
+const phrases = [
+  "Algo difícil de comprender o resolver...",
+  "Algo oculto o inexplicable...",
+  "Genera una reacción inesperada...",
+  "Difícil de creer pero fascinante...",
+  "Algo que impresiona enormemente...",
+  "Genera admiración o sorpresa...",
+  "Descubre algo oculto o importante...",
+  "Rompe expectativas...",
+  "Atrapa el interés y es difícil de ignorar...",
+  "Deja al lector con dudas o confusión...",
+  "Contradictorio y provoca reflexión...",
+  "Algo que nadie se anticipaba...",
+  "Que causa una gran impresión...",
+  "Rompe con lo convencional o esperado...",
+  "Excesivo, fuera de lo común...",
+  "Imponente o que provoca respeto o asombro...",
+  "Una experiencia cargada de emoción...",
+  "Claro y difícil de refutar...",
+  "Estimula la curiosidad del lector...",
+  "Que conmueve o impresiona profundamente...",
+];
+---
+
+<section class="flex flex-col items-center mt-32">
+  <h4
+    class="text-2xl md:text-4xl font-extrabold bg-gradient-to-br from-cyan-500 to-blue-500 text-transparent bg-clip-text"
+  >
+    ¡Novedad del mes!
+  </h4>
+  <TextDyn words={phrases} />
+  <p class="text-gray-100 text-xl m-2 font-medium px-7 text-center">
+    <span class="text-yellow-400">
+      ¿Sabia que la Torre Eiffel puede ser 15 cm más alta durante el verano?
+    </span>
+    Esto pasá porque la expansión térmica del hierro se calienta y las partículas
+    ganan energía cinética, ocupando más espacio.
+  </p>
+</section>

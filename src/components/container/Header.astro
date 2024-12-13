@@ -1,0 +1,59 @@
+---
+import LinkHeader from "../ancors/LinkHeader.astro";
+import SearchPost from "../dynamic/SearchPost";
+import InstagramLogo from "../logos/InstagramLogo.astro";
+import Youtube from "../logos/Youtube.astro";
+
+import { infoPages } from "../../log/infoPages";
+
+const transition = "transition-colors duration-200 hover:text-cyan-200";
+---
+
+<header
+  class="fixed top-0 w-full mx-auto px-4 md:px-16 lg:px-32 py-8 bg-black/25 shadow-lg"
+>
+  <nav class="flex justify-between items-center">
+    <div class="transition-transform duration-300 hover:scale-125">
+      <a href="/">
+        <img
+          class="hidden sm:block"
+          src="/src/components/logos/logo.svg"
+          alt="prietodev logo"
+        />
+      </a>
+    </div>
+    <div class="flex justify-center items-center">
+      <SearchPost />
+    </div>
+    <div class="flex gap-4">
+      <div class="hidden sm:flex items-center gap-4">
+        <LinkHeader href={infoPages.url.ig}>
+          <InstagramLogo />
+        </LinkHeader>
+        <LinkHeader href={infoPages.url.yt}>
+          <Youtube />
+        </LinkHeader>
+      </div>
+    </div>
+    <div
+      class="absolute hidden right-0 top-[9%] bg-slate-800 max-w-2xl w-full rounded-lg"
+    >
+      <div class="flex justify-center items-center mt-3">
+        <img src="/src/components/logos/logo.svg" alt="logo prietodev" />
+      </div>
+      <ul
+        class="text-gray-300 flex flex-col my-9 items-center static z-auto w-auto"
+      >
+        <li class=`${transition} my-3 text-lg`>
+          <a href={infoPages.url.ig} target="_blank">Instagram</a>
+        </li>
+        <li class=`${transition} my-3 text-lg`>
+          <a href={infoPages.url.yt} target="_blank">Youtube</a>
+        </li>
+        <li class=`${transition} my-3 text-lg`>
+          <a href={infoPages.url.x} target="_blank">XTwitter</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
