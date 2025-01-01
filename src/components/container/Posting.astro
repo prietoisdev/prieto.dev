@@ -11,10 +11,9 @@ const PostingAwait = await Astro.glob("../../pages/posts/*.md");
   >
     {
       PostingAwait.map((post) => {
-        <a href={post.url}>
-          <img src={post.frontmatter.img.url} alt={post.frontmatter.img.alt} />
+        <div class="bg-slate-600">
           <h6>{post.frontmatter.title}</h6>
-        </a>;
+        </div>;
       })
     }
   </div>
